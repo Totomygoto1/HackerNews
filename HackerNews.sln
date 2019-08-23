@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.28307.168
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HackerNews", "HackerNews\HackerNews.csproj", "{65112B8A-2E89-48E5-899C-5054BC01573E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTest", "UnitTest\UnitTest.csproj", "{257B813A-CD50-46F3-9039-16E571EFA655}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{65112B8A-2E89-48E5-899C-5054BC01573E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{65112B8A-2E89-48E5-899C-5054BC01573E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{65112B8A-2E89-48E5-899C-5054BC01573E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{257B813A-CD50-46F3-9039-16E571EFA655}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{257B813A-CD50-46F3-9039-16E571EFA655}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{257B813A-CD50-46F3-9039-16E571EFA655}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{257B813A-CD50-46F3-9039-16E571EFA655}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
