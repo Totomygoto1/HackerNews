@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Text.RegularExpressions;
+using System.Runtime;
 
 namespace HackerNews.View
 {
@@ -48,7 +49,17 @@ namespace HackerNews.View
             int valid = 1;
 
             string input = story.url.ToLower();
-            if (Regex.IsMatch(input, "^http://"))
+  
+            if (!string.IsNullOrEmpty(input) && Uri.IsWellFormedUriString(input, UriKind.RelativeOrAbsolute))
+            {
+                valid = 1;
+            }
+            else
+            {
+                valid = 0;
+            }
+            
+            /*if (Regex.IsMatch(input, "^http://"))
             {
                 valid = 1;
             }
@@ -59,7 +70,8 @@ namespace HackerNews.View
             else
             {
                 valid = 0;
-            }
+            }*/
+            
             return valid;
         }
 
