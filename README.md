@@ -7,7 +7,7 @@ We will use the HackerNews web API at: https://hackernews.api-docs.io/v0/overvie
 
 For this project look at MODEL Story: https://hackernews.api-docs.io/v0/items/story GET News and Top Stories: https://hackernews.api-docs.io/v0/live-data/new-and-top-stories
 
-In Visual Studio, create a new Windows console app (.NET Framework) named HackerNewsAPI.
+In Visual Studio, create a new Windows console app (.NET Framework) named HackerNews.
 
 
 # Install the Web API Client Libraries.
@@ -64,7 +64,7 @@ This class matches the data model used by the web API. An app can use HttpClient
 # Adding the Code
 
 
-In Program.cs paste in the following code:
+# In Program.cs paste in the following code:
 
 using System;
 
@@ -84,9 +84,12 @@ using System.Text.RegularExpressions;
 
 using HackerNews.RestAPI;
 
-namespace HackerNews {
+namespace HackerNews 
+
+{
 
 class Program
+
 {
 
     static void Main(string[] args)
@@ -97,10 +100,11 @@ class Program
     }
 
 }
+
 }
 
 
-Create a folder called RestAPI and in that folder create a file/class named GetRepository.cs, and paste in the following code:
+# Create a folder called RestAPI and in that folder create a file/class named GetRepository.cs, and paste in the following code:
 
 using System;
 
@@ -118,10 +122,14 @@ using System.Net.Http.Headers;
 
 using HackerNews.View;
 
-namespace HackerNews.RestAPI {
+namespace HackerNews.RestAPI 
+
+{
 
 public class GetRepository
+
 {
+
     static HttpClient client = new HttpClient();
 
     public static async Task<Story> GetNewsItemAsync(string path, int posts)
@@ -189,10 +197,11 @@ public class GetRepository
     }
 
 }
+
 }
 
 
-Create a folder called View and in that folder create a file/class named UserInput.cs, and paste in the following code:
+# Create a folder called View and in that folder create a file/class named UserInput.cs, and paste in the following code:
 
 using System;
 
@@ -208,9 +217,12 @@ using System.Text.RegularExpressions;
 
 using HackerNews.RestAPI;
 
-namespace HackerNews.View {
+namespace HackerNews.View 
+
+{
 
 public class UserInput
+
 {
     
     public static async Task GetHackerNewsItemsAsync(int posts)
@@ -289,10 +301,11 @@ public class UserInput
     }
 
 }
+
 }
 
 
-In the View folder create a file/class named SerializeJsonObject.cs, and paste in the following code:
+# In the View folder create a file/class named SerializeJsonObject.cs, and paste in the following code:
 
 using System;
 
@@ -306,7 +319,9 @@ using System.Threading.Tasks;
 
 using Json.Net;
 
-namespace HackerNews.View {
+namespace HackerNews.View 
+
+{
 
 public class SerializeJsonObject
 {
@@ -416,10 +431,11 @@ public class SerializeJsonObject
     }
 
 }
+
 }
 
 
-In the View folder create a file/class named ValidateJsonData.cs, and paste in the following code:
+# In the View folder create a file/class named ValidateJsonData.cs, and paste in the following code:
 
 using System;
 
@@ -433,9 +449,12 @@ using System.Threading.Tasks;
 
 using System.Text.RegularExpressions;
 
-namespace HackerNews.View {
+namespace HackerNews.View 
+
+{
 
 public class ValidateJsonData
+
 {
 
     public static int ValidateTitle(Story story)
@@ -521,6 +540,7 @@ public class ValidateJsonData
     }
 
 }
+
 }
 
 On the Build menu, click Build Solution. Then Run.
