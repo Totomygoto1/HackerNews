@@ -50,6 +50,9 @@ namespace HackerNews.View
 
             string input = story.url.ToLower();
   
+            // Valid URI -> https://docs.microsoft.com/en-us/dotnet/api/system.uri.iswellformeduristring?view=netframework-4.8
+            // https://en.wikipedia.org/wiki/Uniform_Resource_Identifier
+            
             if (!string.IsNullOrEmpty(input) && Uri.IsWellFormedUriString(input, UriKind.RelativeOrAbsolute))
             {
                 valid = 1;
@@ -58,19 +61,6 @@ namespace HackerNews.View
             {
                 valid = 0;
             }
-            
-            /*if (Regex.IsMatch(input, "^http://"))
-            {
-                valid = 1;
-            }
-            else if (Regex.IsMatch(input, "^https://"))
-            {
-                valid = 1;
-            }
-            else
-            {
-                valid = 0;
-            }*/
             
             return valid;
         }
