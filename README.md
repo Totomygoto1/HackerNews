@@ -64,7 +64,8 @@ This class matches the data model used by the web API. An app can use HttpClient
 # Adding the Code
 
 
-# In Program.cs paste in the following code:
+In Program.cs paste in the following code:
+
 
 using System;
 
@@ -104,7 +105,8 @@ class Program
 }
 
 
-# Create a folder called RestAPI and in that folder create a file/class named GetRepository.cs, and paste in the following code:
+Create a folder called RestAPI and in that folder create a file/class named GetRepository.cs, and paste in the following code:
+
 
 using System;
 
@@ -201,7 +203,8 @@ public class GetRepository
 }
 
 
-# Create a folder called View and in that folder create a file/class named UserInput.cs, and paste in the following code:
+Create a folder called View and in that folder create a file/class named UserInput.cs, and paste in the following code:
+
 
 using System;
 
@@ -305,7 +308,8 @@ public class UserInput
 }
 
 
-# In the View folder create a file/class named SerializeJsonObject.cs, and paste in the following code:
+In the View folder create a file/class named SerializeJsonObject.cs, and paste in the following code:
+
 
 using System;
 
@@ -324,7 +328,9 @@ namespace HackerNews.View
 {
 
 public class SerializeJsonObject
+
 {
+
     public static int count = 1;
 
     public static void DotNetSerialize(Story story, int posts)
@@ -435,7 +441,8 @@ public class SerializeJsonObject
 }
 
 
-# In the View folder create a file/class named ValidateJsonData.cs, and paste in the following code:
+In the View folder create a file/class named ValidateJsonData.cs, and paste in the following code:
+
 
 using System;
 
