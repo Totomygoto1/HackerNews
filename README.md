@@ -501,11 +501,7 @@ public class ValidateJsonData
         int valid = 1;
 
         string input = story.url.ToLower();
-        if (Regex.IsMatch(input, "^http://"))
-        {
-            valid = 1;
-        }
-        else if (Regex.IsMatch(input, "^https://"))
+        if (!string.IsNullOrEmpty(input) && Uri.IsWellFormedUriString(input, UriKind.RelativeOrAbsolute))
         {
             valid = 1;
         }
